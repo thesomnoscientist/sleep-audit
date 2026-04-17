@@ -1,0 +1,868 @@
+﻿THE SOMNOSCIENTIST
+BRAND GUIDELINES — VERSION 3.0
+Sleep Performance Coaching for Business Owners & Founders
+  
+
+FOR DEVELOPERS & AI SYSTEMS — READ BEFORE BUILDING ANYTHING
+This document defines all visual, copy, tone, messaging, ICP, and offer standards for The SomnoScientist. When building landing pages, websites, or any digital asset — follow these guidelines exactly. All 12 sections are required reading.
+	
+
+Chester Maglo  |  chester@thesomnoscientist.com  |  thesomnoscientist.com
+________________
+
+
+01  BRAND IDENTITY
+
+
+1.1  Brand Name & Details
+Brand name
+	The SomnoScientist
+	Wordmark
+	THESOMNOSCIENTIST — all caps, bold condensed, no spaces (per logo)
+	Personal name
+	Chester Maglo — on authored content and LinkedIn
+	Email
+	chester@thesomnoscientist.com
+	Website
+	thesomnoscientist.com
+	Category
+	Sleep Performance Coaching
+	Positioning
+	Performance coaching, not wellness. Sleep is the mechanism, not the goal.
+	
+
+1.2  Logo
+Three elements: white graduation-capped figure at a laptop | vertical white divider | wordmark THESOMNOSCIENTIST bold condensed caps.
+
+
+  
+
+
+
+* Always on #1B2A41 navy or white. Never on blue or grey.
+* Never recolour. White on dark; navy reversed on white.
+* Min width 180px. Clear space = height of graduation cap on all sides.
+
+
+1.3  Tagline Update
+Current logo: 'Sleep Better. Feel Better. Look Better.'
+
+
+REQUIRED CHANGE: Replace 'Look Better' with 'Perform Better' on all new digital builds. Final tagline: Sleep Better. Feel Better. Perform Better. — aligned to performance positioning.
+	
+
+1.4  One-Line Positioning
+The only sleep coach in the UK with active NHS clinical training and a Master's degree in sleep science — not a wellness influencer, a scientist who coaches performance.
+	
+
+1.5  The Moat
+Chester is an NHS Respiratory & Sleep Scientist completing an MSc in Clinical Science (Sleep & Respiratory), holds an MSc in Sport & Health Science, is a former Level 3 Personal Trainer, and has coached founders since 2023. No other sleep coach combines active NHS clinical practice with this stack. Credentials must be visible above every primary CTA.
+
+
+NHS Sleep Scientist  |  MSc Sport & Health Science  |  MSc Clinical Science
+	
+
+1.6  What This Brand Is NOT
+* Not wellness — no lavender, no 'self-care', no soft-focus imagery
+* Not clinical diagnosis or treatment
+* Not generic sleep hygiene tips — system-based, clinically-grounded, operator-specific
+* Not mindset coaching, meditation, or affirmations — this is physiology
+________________
+
+
+02  VISUAL IDENTITY
+
+
+2.1  Colour Palette — CONFIRMED
+Swatch
+	Name
+	Hex
+	Usage
+	
+
+	Navy Primary
+	#1B2A41
+	Backgrounds, hero, nav, footer — confirmed primary
+	
+
+	Navy Card
+	#1E3050
+	Card fills — confirmed from live site
+	
+
+	Periwinkle
+	#7B9CDF
+	Secondary accent — confirmed — CTAs, highlights
+	
+
+	Blue Light
+	#A8C0EC
+	Sub-labels, lighter accent elements
+	
+
+	Off White
+	#F5F7FA
+	Light sections, alternating rows
+	
+
+	White
+	#FFFFFF
+	Text on dark, clean areas
+	
+
+	Near Black
+	#111827
+	Body text on light
+	
+
+	Grey
+	#6B7280
+	Captions, attribution
+	
+
+CRITICAL: Secondary accent is #7B9CDF (periwinkle/slate blue) — NOT teal. Delete any reference to #1A7A8A throughout.
+	
+
+2.2  Typography — CONFIRMED
+Primary font
+	Chivo — confirmed from live landing page
+	Fallback
+	Chivo, Arial, Helvetica, sans-serif
+	Monospace
+	JetBrains Mono or Courier New — for data values, metrics
+	H1/H2
+	Chivo 700 (Bold)
+	H3/H4
+	Chivo 600 (Semi-bold)
+	Body
+	Chivo 400 (Regular)
+	Load via
+	Google Fonts: font-family: 'Chivo', sans-serif — weights 400, 600, 700, 900
+	
+
+2.3  CSS Design Tokens — Copy Exactly
+:root {
+  --color-navy:        #1B2A41;
+  --color-navy-card:   #1E3050;
+  --color-blue:        #7B9CDF;
+  --color-blue-light:  #A8C0EC;
+  --color-blue-bg:     #EEF3FB;
+  --color-off-white:   #F5F7FA;
+  --color-white:       #FFFFFF;
+  --color-text:        #111827;
+  --color-muted:       #6B7280;
+  --color-border:      #D1D5DB;
+  --font-sans: 'Chivo', Arial, Helvetica, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --ts-h1: clamp(2.5rem, 5vw, 3.5rem);
+  --ts-h2: clamp(1.75rem, 3.5vw, 2.5rem);
+  --ts-body: 1rem;  --ts-small: 0.875rem;
+  --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 2rem; --space-2xl: 3rem; --space-3xl: 4rem;
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg: 16px;
+  --shadow-md: 0 4px 12px rgba(27,42,65,0.20);
+  --shadow-lg: 0 8px 32px rgba(27,42,65,0.28);
+}
+
+
+2.4  Tailwind Config
+module.exports = { theme: { extend: {
+  colors: { navy: { DEFAULT: '#1B2A41', card: '#1E3050' },
+    blue: { DEFAULT: '#7B9CDF', light: '#A8C0EC', bg: '#EEF3FB' },
+    offwhite: '#F5F7FA' },
+  fontFamily: { sans: ['Chivo','Arial','sans-serif'],
+    mono: ['JetBrains Mono','Courier New','monospace'] } }}};
+
+
+2.5  Layout Rules
+* Max content width: 1200px, centred.
+* Padding: 20px mobile, 40px tablet, 80px desktop.
+* Section vertical padding: 80px desktop, 60px tablet, 48px mobile.
+* Dark/light sections alternate. Hero always dark navy.
+
+
+2.6  Imagery Rules
+* Real client photography > stock. George Kenchington video is the visual template.
+* Chester in NHS uniform (white shirt, lanyard) = high-value credibility asset. Use on About/credentials section.
+* Chester presenting clinical content (homeostasis/circadian slide) = authority positioning.
+* Real sleep data screenshots (Apple Health, Whoop, Garmin, Oura) = strongest proof. Use actual before/after device screenshots.
+* No stock wellness photography. No soft-glow, lavender, or sleeping figures.
+* Icons: Lucide React, white on dark backgrounds.
+________________
+
+
+03  UI COMPONENTS
+
+
+3.1  Buttons
+Primary — Confirmed from live site
+Background
+	#1B2A41 (navy) — confirmed
+	Text
+	White, Chivo 600, 1rem
+	Padding
+	16px 32px. Full-width on mobile.
+	Radius
+	8px
+	Hover
+	background: #243550; transform: translateY(-1px)
+	Border
+	None
+	
+
+Secondary
+Background
+	Transparent
+	Border
+	2px solid #7B9CDF
+	Text
+	#7B9CDF, Chivo 600
+	Hover
+	background: rgba(123,156,223,0.1)
+	
+
+3.2  CTA Copy Rules
+Action + outcome. Never single vague words.
+
+
+Correct
+	Book Your Sleep Audit  |  Get Your Performance Score  |  Start Now
+	Incorrect
+	Submit  |  Learn More  |  Click Here  |  Sign Up
+	
+
+3.3  Feature Cards — Confirmed from live site
+Background
+	#1E3050 (navy card)
+	Border radius
+	16px
+	Border
+	None — fill only
+	Padding
+	24px
+	Heading
+	Chivo 700, white, centred
+	Body
+	Chivo 400, light grey, centred
+	
+
+3.4  Metric / Result Card
+Sleep Score  63 → 93  |  Deep Sleep  11 mins → 1hr 30m  |  Consistency +16%  |  Recovery 97%  |  1 Week
+	
+
+.metric-card { background: var(--color-navy-card); border-top: 3px solid var(--color-blue); border-radius: var(--radius-md); padding: var(--space-lg); }
+.metric-value { font-family: var(--font-mono); color: var(--color-blue); font-size: 1.5rem; font-weight: 700; }
+.metric-label { color: var(--color-muted); font-size: var(--ts-small); text-transform: uppercase; letter-spacing: 0.05em; }
+
+
+3.5  Testimonial Component
+Format
+	Circular headshot left ~120px + quote right + name bold + role muted
+	Video
+	Embedded YouTube, lazy load — use for George Kenchington
+	Photo
+	Real headshot. Natural, warm setting (see George's video).
+	________________
+
+
+04  TONE OF VOICE
+
+
+The defining line: 'Garmin should pay me commission.' — Confident without arrogant. Irreverent without unprofessional. Reference this before writing anything.
+	
+
+4.1  Voice Characteristics
+Confident
+	Speaks from clinical expertise. Never hedges. No 'might help' or 'could possibly'.
+	Direct
+	Short sentences. No waffle. Point in the first line.
+	Data-first
+	Numbers before narrative. '63 → 93' not 'dramatically improved sleep'.
+	Irreverent
+	Dry wit. Never self-important. Lines people screenshot and share.
+	Human
+	Sounds like someone who lived this problem.
+	Performance
+	Always output language. Results, not feelings.
+	
+
+4.2  Language — USE
+* Drive, focus, productivity — the ICP's own words
+* Performance, output, execution, results
+* Sleep score, deep sleep, recovery score, HRV — data language the ICP already tracks
+* Trenches, eagle view, firing on all cylinders, tired but wired — tribe vocabulary (from real calls)
+* Force multiplier, compounds — verbatim from prospects
+* Business owners, founders, operators
+
+
+4.3  Language — NEVER USE
+* Wellbeing, wellness, self-care, holistic, balance
+* Optimise (marketer voice)
+* Natural, organic, gentle
+* Transform / transformation (overused)
+* Journey (unless grounded in specific client story)
+* Hustle (dated)
+
+
+4.4  Sentence Structure Rules
+* Short. Direct. Three words can be a sentence.
+* No em dashes in copy. Full stop or restructure.
+* Lead with the result. Explain after.
+* Data before context: '63 → 93 in one week' not 'a significant improvement from 63 to 93'.
+* One idea per sentence in social. Two maximum on website.
+
+
+4.5  Confirmed Headlines
+Primary headline — use on all new pages:
+
+
+Business owners who are putting in the hours but still feel like they're operating at 60% — I'll get your drive, focus and productivity back using a sleep-driven performance system.
+	
+
+Sub-headline — immediately below:
+
+
+As an NHS Sleep Scientist with an MSc in Sport & Health Science, I don't guess — I use the same diagnostic methodology used in clinical practice, applied to your performance.
+	
+
+4.6  Social Proof Language
+Say this
+	No longer lying in bed awake for hours
+	Not this
+	Reduced sleep onset latency
+	Say this
+	No coffee needed after rolling out of bed
+	Not this
+	Improved morning alertness scores
+	Say this
+	Performance feels stable again
+	Not this
+	Demonstrated improvement in cognitive function metrics
+	________________
+
+
+05  ICP & TRIBE PROFILE
+
+
+Built from real research. Three tribes your ICP belongs to simultaneously. Use these to write copy that creates 'that's me' recognition.
+
+
+5.1  The Three Tribes
+Chosen — Sleep and Health Optimiser
+They paid a cost to join. They track data, invest in protocols, listen to Huberman. They chose this identity.
+
+
+Words
+	Sleep score  |  HRV  |  REM/deep sleep  |  Circadian rhythm  |  Sleep debt
+	Objects
+	Apple Watch / Whoop / Oura  |  Magnesium / melatonin  |  Mouth tape  |  Blue light glasses  |  Huberman / DOAC / Hormozi
+	
+
+Circumstantial — The Founder Whose Business Never Calms Down
+Life put them there. An external force created this shared experience.
+
+
+Words
+	60%  |  Trenches  |  Firing on all cylinders  |  Tired but wired  |  Checked out
+	Objects
+	3 coffees by midday  |  Notes app full of 2am ideas  |  Phone in bed  |  Back-to-back calendar  |  WhatsApp/email inbox always full
+	
+
+Place — Online Business / Remote Working
+Their digital location is part of their identity. No natural work/life separation.
+
+
+Words
+	5am club  |  Work block  |  Bootstrapped  |  Outreach  |  Discovery call
+	Objects
+	MacBook Pro  |  Zoom / Google Meet  |  Calendly  |  Home office  |  Claude / ChatGPT
+	
+
+5.2  Psychographic Profile
+Five call participants: Australia, Canada, Amsterdam, Singapore, UK. Age: late 30s to mid-40s. Business tenure: 5–14 years. They have built something real. They are not early-stage.
+
+
+* High performers who have operated at a higher level. They feel the gap between now and then every day.
+* Not lazy. More hours than ever. But firing at 60% and they know it.
+* 3 espressos by midday, inbox at midnight, checked out by 6pm.
+* Analytically-minded. Track data. Tried the things. Sceptical of generic wellness.
+* Carry the weight of everything — founder, parent, partner. Push-through is their only mode.
+* Tried melatonin, magnesium, sleep clinics, breathwork. None of it fixed the root problem.
+* Have budget. Invest in themselves. The gap between what they recognise in your content and what they feel creates the booking.
+
+
+They are not looking for sleep help. They are looking for performance restoration. Sleep is the mechanism, not the goal.
+	
+
+5.3  The Three Tribal Enemies
+Enemy 1 — Generic Sleep Advice Not Built For Operators
+"I went to a sleep clinic. She gave me tricks. Go to bed at 11pm. I didn't follow up. I've been hoping that miraculously I would start sleeping well."
+— Real prospect
+	
+
+They tried standard advice. It didn't stick — not because they lack discipline, but because the advice was not built for someone running a business with a compressed schedule. This is the gap Chester fills.
+
+
+Enemy 2 — Hustle and Push-Through Culture
+"I just had to keep going, keep going with life and kids and everything. That was the nail in the coffin. Enough is enough."
+— Real prospect
+	
+
+Enemy 3 — Supplements That Never Solve Root Cause
+All five research participants had tried melatonin, magnesium, various protocols. They are not against spending — they are against spending on things that don't fix the actual problem.
+________________
+
+
+06  VERBATIM LANGUAGE BANK
+
+
+Every word below is from real prospect and client calls. Use this language in headlines, pain sections, and CTAs. When in doubt, use their words, not yours.
+
+
+6.1  Pain — Their Words
+"I'm right in the trenches, just sort of tumbling along. I need to look at this from an eagle view but it's not automatic."
+— James Ramage
+	
+
+"Everything is a chore right now. Sales calls, meetings, LinkedIn — it's like, this is such a hassle. I'm forcing myself to do it because it needs to be done."
+— James Ramage
+	
+
+"It feels like running on an empty gas tank. The car can kind of struggle, a lot of shaking, it's not a comfortable ride."
+— Wesley van Duin
+	
+
+"I'm sitting in front of the computer and I'm just watching the computer. Two hours, I didn't do anything, just distracted."
+— Luis Juarez
+	
+
+"I just feel like I'm in zombie mode. My body just goes into pilot mode and keeps pushing. Physically I'm there, but mentally I'm not."
+— Luis Juarez
+	
+
+"A double espresso not really hitting the same anymore. You stay in this phase of not really truly waking up during the day."
+— Wesley van Duin
+	
+
+6.2  Situation — Their Reality
+"Instead of just constantly being at 50-60%, it was just nice performing at 100%. But gradually, week over week, that performance percentage is going down again."
+— Wesley van Duin
+	
+
+"I'm trying to do 150% and I'm only getting 50 units of output. I'm getting a third of what I'm putting in."
+— Daniel Milton
+	
+
+"I'm not only sprinting once a day. I might sprint twice, three times a day. And I'm doing this with an injured hamstring."
+— Daniel Milton
+	
+
+"I've tried melatonin. I've tried breathwork. I've tried mouth tape. I've tried red light blockers, saunas. I don't know what else to try."
+— James Ramage
+	
+
+6.3  Desire — What They Want
+"I want to get back to that point where I feel a lot more in control and I have energy to do things. More eager to work. Rather than just avoiding it."
+— James Ramage
+	
+
+"I want to have this constant constant level of energy without the spikes. Without the severe dip."
+— Wesley van Duin
+	
+
+"When I come back from a holiday I'm like, oh, almost 100% sharpness again. I would love to go back to that constant level."
+— Wesley van Duin
+	
+
+"Going to the gym is literally five times more exciting when I sleep well. Everything is just more exciting."
+— Luis Juarez
+	
+
+6.4  Business Consequence
+"It's time loss. Actual time loss. If for another few years I'm not feeling 100% optimal and energised."
+— Luis Juarez
+	
+
+"When the burnout comes, I slow down, and then the whole thing slows down. It delays product launches. 60% of operations depends on me."
+— Luis Juarez
+	
+
+"It's probably a force multiplier."
+— Daniel Milton
+	
+
+"If my sleep is poor, everything becomes harder. Unnecessarily harder. And if it takes so much bandwidth to do something that is normally easy, I'm shortchanging the day."
+— Daniel Milton
+	
+
+6.5  Results — When It Works
+"I feel like a lot of things are clearer. And even though I'm working less, I'm getting a lot more done. Almost all my meetings ended on time or earlier."
+— Daniel Milton (active client)
+	
+
+"Well that worked brilliantly Chester! 4.45 wake up via the app. Feel so much better than previous sleep. Was in the gym for 5:15, home for 6:15 and work for 7:45!! Awesome start!!"
+— Matthew Bird (WhatsApp)
+	
+
+"Had the best night sleep ever last night. Felt amazing when I woke up, no alarm. 1 hr 50 mins deep sleep. Unreal."
+— Gemma (WhatsApp)
+	________________
+
+
+07  THE OFFER — SLEEP-DRIVEN PERFORMANCE SYSTEM
+
+
+System headline: The same output in fewer hours, every week. Not just Mondays.
+	
+
+7.1  What It Is
+90-day 1:1 coaching system. Not a course. Not a PDF. Not a list of sleep tips. Built around the client's real schedule, real data, and what is actually driving their sleep off track.
+
+
+7.2  Three Phases
+Phase 01 — Stabilise (Weeks 1–4)
+Remove the chaos. Make every morning predictable.
+* Sleep timing correction and rhythm reset — eliminate the Monday-to-Wednesday cliff
+* Caffeine structure audit — stop relying on coffee number three before 9am
+* Light exposure and circadian recalibration
+* Stress unload system — break the tired-but-wired loop
+* Baseline wearable data analysis (Garmin, Whoop, Oura)
+Outcome: Predictable mornings. Fewer slow starts. Quick wins.
+
+
+Phase 02 — Optimise (Weeks 5–8)
+Deepen recovery. Fuel the whole week, not just Mondays.
+* Deep sleep architecture optimisation — tracked, measurable
+* Nutritional timing and energy calibration
+* Evening shutdown protocol — stop the 11pm second wind
+* Recovery scoring and weekly benchmarking
+* Workload-to-energy alignment
+Outcome: Consistent energy Monday to Friday. Thursday performing like Monday.
+
+
+Phase 03 — Sustain (Weeks 9–12)
+Make it permanent, especially when life gets hard.
+* High-pressure and travel resilience protocols
+* Cognitive performance structuring for high-stakes calls and pitches
+* Personal long-term performance playbook
+* Final 90-day performance data report — measurable proof
+* Maintenance framework — new baseline, not a temporary fix
+Outcome: High performance under pressure, not just on easy weeks. Permanent.
+
+
+7.3  What's Included
+Initial 1:1 call
+	Personalised sleep plan from day one
+	Weekly 1:1 coaching
+	Focused adjustments based on data
+	Daily WhatsApp
+	Direct access between sessions
+	Wearable data review
+	Garmin, Whoop, or Oura — interpreted by a sleep scientist
+	Nutrition & exercise guidance
+	Sleep does not exist in isolation
+	Monthly review calls
+	Reassess and optimise
+	Final 90-day report
+	Data, analysis, and measurable proof of what changed
+	
+
+7.4  Who It Is For
+* Business owner or founder, 6 months to 3 years in, doing most of it yourself
+* Noticed performance fluctuates and suspect sleep is part of it
+* Tried things before and nothing has stuck long term
+* Already invests in yourself through coaching, training, or personal development
+* Wants week-one results, not 6 months of journaling
+* Wants a clinical approach, not generic sleep tips
+
+
+7.5  Who It Is NOT For
+* Looking for a quick fix or a magic supplement stack
+* Not willing to make small changes to routine
+* Thinks 5 hours of sleep is fine and not open to being wrong
+* Wants mindset coaching or meditation — this is physiology, not affirmations
+
+
+7.6  The Urgency Line
+Every month you do not address this, the pattern continues. The off days keep tallying up. Sleep does not improve through willpower. It improves through structure.
+	
+
+7.7  Booking Link
+Typeform
+	https://form.typeform.com/to/ZfQuT1OP
+	________________
+
+
+08  CLIENT RESULTS — CONFIRMED PROOF POINTS
+
+
+Section intro line: 'Real numbers. Same devices you already use. These are not feelings. This is data.'
+	
+
+Client
+	Result
+	Timeframe
+	Format
+	Gemma
+	Sleep score 63 → 96 night one. Deep sleep: 11min → 1hr 22min. By week 4: 1hr 50min (900% increase).
+	Week 1 + Week 4
+	WhatsApp screenshots + device data
+	Jordan
+	Recovery score 97%. Sleep score 63 → 93.
+	Week 3
+	Device data
+	Matthew Bird
+	Gym at 5:15am, desk by 7:45am. 'Unheard of before we started.'
+	Week 1
+	WhatsApp + testimonial
+	Kevin
+	Sleep consistency: 75% → 87% (+16 percentage points).
+	Week 1
+	Device data
+	George Kenchington
+	Energy became predictable. More focus. Performing better in every area.
+	Ongoing
+	LinkedIn review + YouTube video
+	Shan Khadda
+	Improved sleep quality, deeper rest, boosted daily productivity significantly. Founder/CEO VisionOne Tech.
+	Ongoing
+	LinkedIn review
+	Daniel Milton
+	Meetings ending on time. Working less, getting more done. Sleep time moved from 1.30–2am.
+	Active client
+	Call transcripts
+	________________
+
+
+09  CONTENT ANGLES
+
+
+Ranked by tribal specificity — higher = more likely to create 'that's me' moment. Use as starting points for page sections, LinkedIn posts, and email sequences.
+
+
+#
+	Angle
+	Hook
+	1
+	Tired but wired
+	You're tired but wired at midnight. Crash by 2pm the next day. That's not normal — it's a fixable pattern.
+	2
+	The reference state
+	You remember what it felt like to think clearly. That version of you still exists. It's just buried under months of fragmented sleep.
+	3
+	Checked out by 6pm
+	You made it to dinner. But you checked out by 6pm. You were there. But you weren't really there.
+	4
+	Eagle view vs trenches
+	You know that feeling when you can zoom out and see the whole board? Sleep deprivation took that from you. Here is how to get it back.
+	5
+	The caffeine trap
+	The founder who drinks 3 espressos by midday to simulate the energy they used to have naturally. That was me. Here's what changed.
+	6
+	Melatonin is not the answer
+	You've tried melatonin. It worked, then it stopped. Here's why — and what actually fixes the root cause.
+	7
+	Time loss framing
+	Bad sleep doesn't just make you tired. It turns a 6-hour day into a 10-hour day. That's actual time loss, not just a feeling.
+	8
+	The watch paradox
+	Your Apple Watch says your sleep was poor. Now you feel worse before the day starts. The data is measuring you but not fixing you.
+	9
+	Why the sleep clinic didn't work
+	Sleep clinics are designed for clinical disorders. If you're a founder with a racing mind, the standard protocol doesn't fit.
+	10
+	The gym motivation signal
+	When did you last actually feel excited to train? That's the metric. Sleep is the missing variable.
+	________________
+
+
+10  PAGE ARCHITECTURE
+
+
+10.1  Landing Page Section Order
+#
+	Section
+	Content & Rules
+	1
+	Nav
+	Logo left. 5 links max. One CTA button right. Navy.
+	2
+	Hero
+	Dark navy. Primary headline + sub-headline + CTA above fold + metric proof strip.
+	3
+	Pain
+	3–4 pain points from verbatim language bank. 'That's me' recognition. No clinical language.
+	4
+	Credentials
+	NHS + MSc block. Why different. MUST appear before first CTA.
+	5
+	Mechanism
+	The Sleep-Driven Performance System. 3 steps max. Never expand this.
+	6
+	Proof
+	Gemma + Matthew Bird + George Kenchington (video + quote) at minimum.
+	7
+	Process
+	Book audit → Chester reviews → session → results.
+	8
+	Is This For You?
+	Qualification checklist — who it is and is not for.
+	9
+	FAQ
+	Time commitment, will it work for me, investment.
+	10
+	CTA
+	Single button. Dark navy. No distractions.
+	11
+	Footer
+	Logo + 'Sleep Better. Feel Better. Perform Better.' + links + credentials + email.
+	
+
+10.2  Breakpoints
+--bp-mobile: 480px; /* Design for 375px first */
+--bp-tablet: 768px;
+--bp-desktop: 1024px;
+--bp-wide: 1200px; /* Max content width */
+
+
+Mobile-first. The ICP is a founder checking LinkedIn on an iPhone.
+	
+
+10.3  Conversion Rules
+* Primary CTA visible above fold on every device.
+* One CTA per section. Never two adjacent.
+* Credentials before any conversion CTA.
+* Metric cards in the hero section.
+* No pop-ups within 30 seconds of load.
+________________
+
+
+11  DEVELOPER HANDOFF
+
+
+11.1  Tech Stack
+Framework
+	Next.js 14+ (App Router) preferred. Astro acceptable for static.
+	Styling
+	Tailwind CSS with brand token extension (Section 2.4).
+	Fonts
+	Google Fonts — Chivo. Load via next/font or <link rel=preload>.
+	Icons
+	Lucide React.
+	Animations
+	Framer Motion. Subtle entrance only. No looping.
+	Images
+	Next/Image, WebP, all alt text required.
+	Video
+	YouTube embed (live on site). Lazy load.
+	Analytics
+	Google Analytics 4 or Plausible.
+	
+
+11.2  Component Names
+HeroSection
+	Headline, sub-headline, CTA, metric strip
+	MetricCard
+	Before → After result
+	CredentialsBadge
+	NHS | MSc | MSc inline
+	FeatureCard
+	Navy card — Sleep Score / Insight / Direction style
+	TestimonialCard
+	Photo + quote + name + role
+	TestimonialVideo
+	YouTube embed with name overlay
+	CTASection
+	Full-width single CTA
+	ProcessStep
+	Numbered step
+	FAQAccordion
+	Expandable FAQ
+	SocialProofStrip
+	Row of MetricCards
+	AssessmentQuestion
+	A–E with letter badge
+	
+
+11.3  What NOT To Build
+* No purple, green, orange, or red anywhere.
+* No gradient blobs, glassmorphism, or soft-glow effects.
+* No stock wellness photography.
+* Do not overcrowd the hero.
+* Do not use 'Look Better' — always 'Perform Better'.
+* Do not animate metric numbers.
+* Do not mix B2B and B2C messaging on the same page.
+________________
+
+
+12  QUICK REFERENCE CARD
+
+
+Colours
+Swatch
+	Name
+	Hex
+	Usage
+	
+
+	Navy Primary
+	#1B2A41
+	All backgrounds, hero, nav
+	
+
+	Periwinkle
+	#7B9CDF
+	CTAs, accents
+	
+
+	Off White
+	#F5F7FA
+	Light sections
+	
+
+	White
+	#FFFFFF
+	Text on dark
+	
+
+Typography
+Font
+	Chivo (Google Fonts) — CONFIRMED
+	H1
+	Chivo 700, clamp(2.5 → 3.5rem)
+	Body
+	Chivo 400, 1rem, #111827
+	Data
+	JetBrains Mono, #7B9CDF
+	
+
+Voice
+Data first. Short sentences. Confident not arrogant. Performance language. Their words not marketer words. Tone: 'Garmin should pay me commission.'
+	
+
+Credentials — Never Change
+NHS Sleep Scientist  |  MSc Sport & Health Science  |  MSc Clinical Science
+	
+
+Primary Headline
+Business owners who are putting in the hours but still feel like they're operating at 60% — I'll get your drive, focus and productivity back using a sleep-driven performance system.
+	
+
+System Headline
+The same output in fewer hours, every week. Not just Mondays.
+	
+
+Hero Proof Strip
+Sleep Score 63 → 93  |  Deep Sleep 11 mins → 1hr 30m  |  Consistency +16%  |  Recovery 97%  |  1 Week
+	
+
+Urgency Line
+Every month you do not address this, the pattern continues. Sleep does not improve through willpower. It improves through structure.
+	
+
+Contact & Booking
+Email
+	chester@thesomnoscientist.com
+	Website
+	thesomnoscientist.com
+	Book
+	https://form.typeform.com/to/ZfQuT1OP
