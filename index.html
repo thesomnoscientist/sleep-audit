@@ -56,6 +56,18 @@
     .label.on-dark { color: var(--blue-light); }
     .label.on-dark::before { background: var(--blue-light); }
 
+    /* ── STEP TAG (bigger, for the 1-2-3 path) ── */
+    .step-tag {
+      display:inline-flex; align-items:center; gap:10px;
+      font-family:var(--font);
+      font-size:clamp(0.9rem, 2.3vw, 1.1rem);
+      font-weight:800; letter-spacing:0.14em; text-transform:uppercase;
+      color:var(--blue); margin-bottom:14px;
+    }
+    .step-tag::before { content:''; width:30px; height:2px; background:var(--blue); flex-shrink:0; }
+    .step-tag.on-dark { color:var(--blue-light); }
+    .step-tag.on-dark::before { background:var(--blue-light); }
+
     .h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 900; line-height: 1.07; letter-spacing: -0.03em; }
     .h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.025em; }
     .h3 { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 700; line-height: 1.25; }
@@ -201,6 +213,22 @@
       font-size:clamp(0.9rem,2.5vw,1.05rem); color:rgba(255,255,255,.55);
       line-height:1.65; max-width:480px; margin-bottom:32px;
     }
+    .vsl-hero-note {
+      display:inline-flex; align-items:center; gap:7px;
+      font-family:var(--font); font-size:clamp(0.74rem,2vw,0.82rem);
+      color:rgba(255,255,255,.6); letter-spacing:.01em;
+      margin-bottom:28px;
+    }
+    .vsl-hero-note::before {
+      content:''; width:6px; height:6px; border-radius:50%;
+      background:var(--blue-light); flex-shrink:0;
+    }
+    .vsl-caption { margin:0 0 14px; text-align:center; max-width:520px; }
+    .vsl-vnum {
+      display:block; font-family:var(--font); font-size:0.72rem; font-weight:800;
+      letter-spacing:0.12em; text-transform:uppercase; color:var(--blue-light); margin-bottom:5px;
+    }
+    .vsl-vtitle { font-size:clamp(0.95rem,2.5vw,1.05rem); font-weight:700; color:var(--white); }
     .vsl-wrap {
       width:100%; max-width:820px;
       border-radius:16px; overflow:hidden;
@@ -377,8 +405,9 @@
     .video-embed { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; }
     .video-embed iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
     .video-caption { padding:14px 18px; }
+    .video-num { font-family:var(--font); font-size:0.72rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--blue); margin-bottom:5px; }
     .video-person { font-size:clamp(0.85rem,2vw,0.9rem); font-weight:700; color:var(--navy); }
-    .video-role { font-size:clamp(0.75rem,1.8vw,0.8rem); color:var(--muted); }
+    .video-role { font-size:clamp(0.75rem,1.8vw,0.8rem); color:var(--muted); line-height:1.5; margin-top:2px; }
 
     @media(min-width:640px) { .videos-grid { grid-template-columns:repeat(2,1fr); gap:24px; } }
     @media(min-width:1024px) { #videos, #more-to-watch { padding:80px 0; } .videos-grid { margin-top:40px; } }
@@ -474,11 +503,14 @@
 <section id="vsl-hero">
   <div class="wrap">
     <div class="vsl-hero-inner">
-<h1 class="h1 r d1">Watch this before<br/>your call.</h1>
-      <p class="vsl-hero-sub r d2">
-        A quick walk-through of exactly what we'll cover, how it works, and what to expect.
-      </p>
-      <div class="vsl-wrap r d3">
+<div class="step-tag on-dark r d1">Step 1</div>
+      <h1 class="h1 r d2">Watch These 4 Short Videos Before Your Call</h1>
+      <div class="vsl-caption r d3">
+        <span class="vsl-vnum">Video 1 of 4 · Start Here</span>
+        <span class="vsl-vtitle">How to get the most out of your call.</span>
+      </div>
+      <p class="vsl-hero-note r d3">Please allow 5 seconds for the video to load.</p>
+      <div class="vsl-wrap r d4">
         <div id="vidalytics_embed_g7oMjnAmhmB8vddm" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
         <script type="text/javascript">
         (function (v, i, d, a, l, y, t, c, s) {
@@ -499,38 +531,36 @@
 <!-- ── MORE TO WATCH ── -->
 <section id="more-to-watch">
   <div class="wrap">
-    <div class="label r">More To Watch</div>
-    <h2 class="h2 r d1" style="color:var(--navy);margin-bottom:8px;">More to watch before we speak.</h2>
-    <p class="r d2" style="color:var(--muted);font-size:1rem;margin-bottom:0;max-width:540px;">
-      Three short videos: worst case, average result, how we fix it.
-    </p>
     <div class="videos-grid">
 
       <div class="video-card r d1">
-        <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/40f01abef0284b26af8de9d64aad6088" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
         <div class="video-caption">
+          <div class="video-num">Video 2 of 4</div>
           <div class="video-person">Worst Case</div>
-          <div class="video-role">The honest worst-case scenario.</div>
+          <div class="video-role">How my client did the bare minimum, still stopped waking in the night, and reduced his risk of severe health problems.</div>
         </div>
+        <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/40f01abef0284b26af8de9d64aad6088" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy" title="Worst Case" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
       </div>
 
       <div class="video-card r d2">
+        <div class="video-caption">
+          <div class="video-num">Video 3 of 4</div>
+          <div class="video-person">Average Result</div>
+          <div class="video-role">5 client results. Including 2x sleep quality, falling asleep faster, and more productive hours, all within 2 to 8 weeks.</div>
+        </div>
         <div class="video-embed" style="padding-bottom:62.5%;">
           <iframe src="https://www.loom.com/embed/6a3606c5cdb440748027e1bf1a135479" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy" title="Average Result"></iframe>
-        </div>
-        <div class="video-caption">
-          <div class="video-person">Average Result</div>
-          <div class="video-role">What will change and how fast.</div>
         </div>
       </div>
 
       <div class="video-card r d3">
+        <div class="video-caption">
+          <div class="video-num">Video 4 of 4</div>
+          <div class="video-person">How We Fix It</div>
+          <div class="video-role">How I find the root issue of poor sleep and fix it with just 1 to 3 changes. No tracker, and 15 to 30 minutes a week.</div>
+        </div>
         <div class="video-embed" style="padding-bottom:62.5%;">
           <iframe src="https://www.loom.com/embed/ee1eaea91cc94133bf8d7dc406570aa6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy" title="How We Fix It"></iframe>
-        </div>
-        <div class="video-caption">
-          <div class="video-person">How We Fix It</div>
-          <div class="video-role">The actual method we use to fix your sleep.</div>
         </div>
       </div>
 
@@ -543,8 +573,8 @@
   <div class="wrap">
     <div class="call-info-grid">
       <div>
-        <div class="label r">Your Sleep Performance Audit</div>
-        <h2 class="call-info-heading r d1">Here's exactly what happens on the call.</h2>
+        <div class="step-tag r">Step 2</div>
+        <h2 class="call-info-heading r d1">Read Exactly What Happens On The Call</h2>
       </div>
       <div class="call-steps">
 
@@ -591,11 +621,8 @@
 <!-- ── VIDEO TESTIMONIALS ── -->
 <section id="videos">
   <div class="wrap">
-    <div class="label r">Video Testimonials</div>
-    <h2 class="h2 r d1" style="color:var(--navy);margin-bottom:8px;">In their own words.</h2>
-    <p class="r d2" style="color:var(--muted);font-size:1rem;margin-bottom:0;max-width:540px;">
-      What changed, and what it meant for their work.
-    </p>
+    <div class="step-tag r">Step 3</div>
+    <h2 class="h2 r d1" style="color:var(--navy);margin-bottom:0;">Check Out Some Of My Clients' Testimonials</h2>
     <div class="videos-grid">
 
       <div class="video-card r d1">
@@ -898,6 +925,16 @@
   </div>
 </section>
 
+<!-- ── CLOSING / YOU'RE BOOKED ── -->
+<section id="cta">
+  <div class="wrap">
+    <div class="vsl-booked-badge r"><span></span>Your Call Is Booked</div>
+    <h2 class="h2 cta-h r d1">You're all set. See you on the call.</h2>
+    <p class="cta-sub r d2" style="margin-bottom:18px;">Watch the four videos above, then show up on time, somewhere quiet, ready to talk through your sleep. That's all you need to do.</p>
+    <p class="r d3" style="font-size:0.85rem;color:rgba(255,255,255,.4);">Check your inbox for the calendar invite and meeting link.</p>
+  </div>
+</section>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="wrap">
@@ -905,7 +942,6 @@
       <div>
         <div class="footer-tagline">Sleep Better. Feel Better. Perform Better.</div>
         <div class="footer-creds">
-          <span class="fcred">NHS Sleep Scientist (STP)</span>
           <span class="fcred">MSc Sport and Health Science</span>
           <span class="fcred">MSc Sleep Science</span>
         </div>
